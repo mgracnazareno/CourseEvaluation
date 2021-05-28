@@ -17,5 +17,13 @@ namespace CourseEvaluation
         {
             InitializeComponent();
         }
+
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            grade.Midterm = Convert.ToInt32(txtMidterm.Text);
+            grade.Project = Convert.ToInt32(txtProject.Text);
+            grade.FinalExam = Convert.ToInt32(txtProject.Text);
+            grade.FinalResult = grade.GetFinalGrades();
+        }
     }
 }
