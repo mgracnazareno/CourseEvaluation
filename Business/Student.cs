@@ -11,5 +11,18 @@ namespace CourseEvaluation.Business
         public string LastName { get; set; }
         public string Email { get; set; }
 
+        public Student()
+        {
+
+        }
+
+        public Student(int _studendtId, string _fname, string _lname, string _email)
+        {
+            this.StudentId = _studendtId;
+            this.FirstName = _fname;
+            this.LastName = _lname;
+            this.Email = _email;
+
+        }
     }
 }

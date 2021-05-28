@@ -53,6 +53,15 @@ namespace CourseEvaluation
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnList = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.lstInfo = new System.Windows.Forms.ListView();
+            this.studentId = new System.Windows.Forms.ColumnHeader();
+            this.firstName = new System.Windows.Forms.ColumnHeader();
+            this.lastName = new System.Windows.Forms.ColumnHeader();
+            this.email = new System.Windows.Forms.ColumnHeader();
+            this.midTerm = new System.Windows.Forms.ColumnHeader();
+            this.project = new System.Windows.Forms.ColumnHeader();
+            this.finalExam = new System.Windows.Forms.ColumnHeader();
+            this.finalGrade = new System.Windows.Forms.ColumnHeader();
             this.grpStudentInfo.SuspendLayout();
             this.grpEvaluation.SuspendLayout();
             this.SuspendLayout();
@@ -280,11 +289,70 @@ namespace CourseEvaluation
             this.btnExit.Text = "E&xit";
             this.btnExit.UseVisualStyleBackColor = true;
             // 
+            // lstInfo
+            // 
+            this.lstInfo.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.studentId,
+            this.firstName,
+            this.lastName,
+            this.email,
+            this.midTerm,
+            this.project,
+            this.finalExam,
+            this.finalGrade});
+            this.lstInfo.GridLines = true;
+            this.lstInfo.HideSelection = false;
+            this.lstInfo.Location = new System.Drawing.Point(35, 288);
+            this.lstInfo.Name = "lstInfo";
+            this.lstInfo.Size = new System.Drawing.Size(741, 131);
+            this.lstInfo.TabIndex = 4;
+            this.lstInfo.UseCompatibleStateImageBehavior = false;
+            this.lstInfo.View = System.Windows.Forms.View.Details;
+            // 
+            // studentId
+            // 
+            this.studentId.Text = "Student Number";
+            this.studentId.Width = 100;
+            // 
+            // firstName
+            // 
+            this.firstName.Text = "First Name";
+            this.firstName.Width = 100;
+            // 
+            // lastName
+            // 
+            this.lastName.Text = "Last Name";
+            this.lastName.Width = 100;
+            // 
+            // email
+            // 
+            this.email.Text = "Email";
+            this.email.Width = 120;
+            // 
+            // midTerm
+            // 
+            this.midTerm.Text = "Midterm";
+            // 
+            // project
+            // 
+            this.project.Text = "Project";
+            // 
+            // finalExam
+            // 
+            this.finalExam.Text = "Final Exam";
+            this.finalExam.Width = 100;
+            // 
+            // finalGrade
+            // 
+            this.finalGrade.Text = "Final Grde";
+            this.finalGrade.Width = 100;
+            // 
             // FormCourseEvaluation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 386);
+            this.ClientSize = new System.Drawing.Size(800, 447);
+            this.Controls.Add(this.lstInfo);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnList);
             this.Controls.Add(this.btnDelete);
@@ -328,5 +396,14 @@ namespace CourseEvaluation
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnList;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.ListView lstInfo;
+        private System.Windows.Forms.ColumnHeader studentId;
+        private System.Windows.Forms.ColumnHeader firstName;
+        private System.Windows.Forms.ColumnHeader lastName;
+        private System.Windows.Forms.ColumnHeader email;
+        private System.Windows.Forms.ColumnHeader midTerm;
+        private System.Windows.Forms.ColumnHeader project;
+        private System.Windows.Forms.ColumnHeader finalExam;
+        private System.Windows.Forms.ColumnHeader finalGrade;
     }
 }

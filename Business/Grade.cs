@@ -13,6 +13,18 @@ namespace CourseEvaluation.Business
         public float FinalExam { get; set; }
         public float FinalResult { get; set; }
 
+        public Grade()
+        {
+
+        }
+
+        public Grade(float _midterm, float _project, float _finalExam, float _finalResult)
+        {
+            this.Midterm = _midterm;
+            this.Project = _project;
+            this.FinalExam = _finalExam;
+            this.FinalResult = _finalResult;
+        }
         public float GetFinalGrades(Grade grades)
         {
             const float MIDTERM = 0.3f;
