@@ -14,9 +14,9 @@ namespace CourseEvaluation.DA
         public static void Save(Student student)
         {
             StreamWriter sw = new StreamWriter(filePath, true);
-            sw.WriteLine(student.StudentId +
-                         student.FirstName +
-                         student.LastName +
+            sw.WriteLine(student.StudentId + " | " +
+                         student.FirstName + " | " +
+                         student.LastName + " | " +
                          student.Email
                 );
             sw.Close();
