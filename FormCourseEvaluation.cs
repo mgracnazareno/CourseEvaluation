@@ -23,7 +23,9 @@ namespace CourseEvaluation
             grade.Midterm = Convert.ToInt32(txtMidterm.Text);
             grade.Project = Convert.ToInt32(txtProject.Text);
             grade.FinalExam = Convert.ToInt32(txtProject.Text);
-           // grade.FinalResult = grade.GetFinalGrades();
+            // grade.FinalResult = grade.GetFinalGrades();
+            grade.FinalResult = grade.GetFinalGrades();
+            lblFinResult.Text = grade.FinalResult.ToString();
         }
     }
 }

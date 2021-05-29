@@ -302,9 +302,9 @@ namespace CourseEvaluation
             this.finalGrade});
             this.lstInfo.GridLines = true;
             this.lstInfo.HideSelection = false;
-            this.lstInfo.Location = new System.Drawing.Point(35, 288);
+            this.lstInfo.Location = new System.Drawing.Point(23, 396);
             this.lstInfo.Name = "lstInfo";
-            this.lstInfo.Size = new System.Drawing.Size(741, 131);
+            this.lstInfo.Size = new System.Drawing.Size(765, 131);
             this.lstInfo.TabIndex = 4;
             this.lstInfo.UseCompatibleStateImageBehavior = false;
             this.lstInfo.View = System.Windows.Forms.View.Details;
@@ -327,7 +327,7 @@ namespace CourseEvaluation
             // email
             // 
             this.email.Text = "Email";
-            this.email.Width = 120;
+            this.email.Width = 160;
             // 
             // midTerm
             // 
@@ -351,7 +351,7 @@ namespace CourseEvaluation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 447);
+            this.ClientSize = new System.Drawing.Size(800, 552);
             this.Controls.Add(this.lstInfo);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnList);

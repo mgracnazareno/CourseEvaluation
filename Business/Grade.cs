@@ -25,16 +25,16 @@ namespace CourseEvaluation.Business
             this.FinalExam = _finalExam;
             this.FinalResult = _finalResult;
         }
-        public float GetFinalGrades(Grade grades)
+        public int GetFinalGrades()
         {
             const float MIDTERM = 0.3f;
             const float PROJECT = 0.3f;
             const float FINALS = 0.4f;
             int finalResult = 0;
 
-            finalResult = Convert.ToInt32(((grades.Midterm * MIDTERM) + (grades.Project * PROJECT) + (grades.FinalExam * FINALS)) /3);
-
+            finalResult = Convert.ToInt32((Midterm * MIDTERM) + (Project * PROJECT) + (FinalExam * FINALS));
             return finalResult;
+          
         }
     }
 }
