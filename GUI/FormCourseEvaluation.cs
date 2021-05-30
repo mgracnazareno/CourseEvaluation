@@ -13,6 +13,8 @@ namespace CourseEvaluation
     public partial class FormCourseEvaluation : Form
     {
         List<Student> lstStudent = new List<Student>();
+        List<Grade> lstGrade = new List<Grade>();
+
         private Grade grade = new Grade();
         public FormCourseEvaluation()
         {
@@ -44,11 +46,16 @@ namespace CourseEvaluation
             StudentDA.Save(student);
 
             Grade grade = new Grade();
-            grade.Midterm = Convert.ToInt32(txtMidterm.Text);
-            grade.Project = Convert.ToInt32(txtProject.Text);
-            grade.FinalExam = Convert.ToInt32(txtFinalExam.Text);
-            grade.FinalResult = int.Parse(lblFinResult.Text);
+            grade.Midterm = Convert.ToDouble(txtMidterm.Text);
+            grade.Project = Convert.ToDouble(txtProject.Text);
+            grade.FinalExam = Convert.ToDouble(txtFinalExam.Text);
+            grade.FinalResult = double.Parse(lblFinResult.Text);
             GradeDA.SaveGrade(grade);
+        }
+
+        private void btnList_Click(object sender, EventArgs e)
+        {
+            StudentDA.ListStudents(lstInfo);
         }
     }
 }

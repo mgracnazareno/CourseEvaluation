@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Forms;
 
 namespace CourseEvaluation.Business
 {
     public class Grade
     {
-        //constatns
-        
-        public float Midterm { get; set; }
-        public float Project { get; set; }
-        public float FinalExam { get; set; }
-        public float FinalResult { get; set; }
+        public double Midterm { get; set; }
+        public double Project { get; set; }
+        public double FinalExam { get; set; }
+        public double FinalResult { get; set; }
 
         public Grade()
         {
@@ -27,13 +26,12 @@ namespace CourseEvaluation.Business
         }
         public int GetFinalGrades()
         {
-            const float MIDTERM = 0.3f;
-            const float PROJECT = 0.3f;
-            const float FINALS = 0.4f;
-            int finalResult = 0;
-
-            finalResult = Convert.ToInt32((Midterm * MIDTERM) + (Project * PROJECT) + (FinalExam * FINALS));
-            return finalResult;
+            const double MIDTERM = 0.3f;
+            const double PROJECT = 0.3f;
+            const double FINALS = 0.4f;
+           
+            FinalResult= Convert.ToInt32((Midterm * MIDTERM) + (Project * PROJECT) + (FinalExam * FINALS));
+            return (int)FinalResult;
           
         }
     }

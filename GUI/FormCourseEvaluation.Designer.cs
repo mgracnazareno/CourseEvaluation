@@ -306,6 +306,7 @@ namespace CourseEvaluation
             this.btnList.TabIndex = 3;
             this.btnList.Text = "&List";
             this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // btnExit
             // 

@@ -15,10 +15,19 @@ namespace CourseEvaluation.DA
         {
             using (StreamWriter sw = new StreamWriter(filePathGrade, true))
             {
-                sw.WriteLine((grade.Midterm + "|" + grade.Project + "|" + grade.FinalExam + "|" + grade.FinalResult));
+                sw.WriteLine( grade.Midterm + "|" + 
+                              grade.Project + "|" + 
+                              grade.FinalExam + "|" + 
+                              grade.FinalResult
+                            );
                 sw.Close();
                 MessageBox.Show("Grades has been added sucessfully!");
             }
+        }
+
+        public static void ListGrade(ListView lstGrade)
+        {
+
         }
     }
 }
