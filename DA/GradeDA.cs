@@ -27,7 +27,27 @@ namespace CourseEvaluation.DA
 
         public static void ListGrade(ListView lstGrade)
         {
+            using (StreamReader sReader = new StreamReader(filePathGrade))
+            {
+                try
+                {
+                    string line = sReader.ReadLine();
 
+                    while (line != null)
+                    {
+                        string[] fields = line.Split(" | ");
+                        ListViewItem item = new ListViewItem(fields[0]);
+                        item.SubItems.Add(fields[1]);
+                        item.SubItems.Add(fields[2]);
+                        item.SubItems.Add(fields[3]);
+                        lstGrade.Items.Add(item);
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("The file can not be read!", "Warning!",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

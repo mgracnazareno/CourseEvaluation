@@ -72,10 +72,11 @@ namespace CourseEvaluation.DA
                     stud.LastName = fields[2];
                     stud.Email = fields[3];
                     lstStudent.Add(stud);
-                    line = sReader.ReadLine();
+                    
                 }
-                return lstStudent;
+                sReader.ReadLine();
             }
+            return lstStudent;
         }
     }
 }
